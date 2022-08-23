@@ -1,0 +1,30 @@
+# Partners, lasciare prima di WP!
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^helpers/(\d{4}/.*)$ https://partners.grusp.org/$1 [L,R=301]
+RewriteRule ^(img/(media-)?partners/.*)$ https://partners.grusp.org/$1 [L,R=301]
+</IfModule>
+
+# BEGIN Really Simple SSL Redirect 5.3.1
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+# END Really Simple SSL Redirect
+# BEGIN WordPress
+# Le direttive (linee) tra `BEGIN WordPress` e `END WordPress` sono
+# generate dinamicamente, e dovrebbero essere modificate solo tramite i filtri di WordPress.
+# Ogni modifica alle direttive tra questi marcatori verrà sovrascritta.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

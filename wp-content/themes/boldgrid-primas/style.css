@@ -1,0 +1,523 @@
+/*
+Theme Name: Primas
+Author: The BoldGrid Team
+Theme URI: https://www.boldgrid.com/primas
+Author URI: https://www.boldgrid.com/the-team
+Description: Designed specifically for use with the BoldGrid suite of plugins, all BoldGrid themes are highly customizable, responsive to a wide range of devices, and of course, beautiful. Every BoldGrid theme includes five pre-selected color palettes and an advanced tool for creating your own unique palette. In addition, all themes feature multiple menu locations and widget areas, which are easily customizable to suit your needs. So if you're looking for a theme that looks great, feels modern and professional, and offers plenty of features to make it your own, you've chosen well.
+Version: 1.25.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: boldgrid-primas
+
+Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready, boldgrid-theme-35
+*/
+
+/*------------------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------------------
+# Base Styles
+	## Positioning
+	## Typography
+	## Titles
+	## Buttons
+	## Et Cetera
+# Header
+# Navigation
+	## Main Menu
+	## Other Menus
+	## Social Menus
+# GridBlocks
+# Modules
+	## Global
+	## Alpha
+	## Beta
+	## Gamma
+# Pages
+# Posts
+# Plugins
+	## WP Canvas Gallery
+	## WooCommerce
+# Footer
+------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------
+# Base Styles
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Positioning
+-----------------------------------------------*/
+.page-content,
+.entry-content,
+.entry-summary {
+	clear: both;
+}
+.site-content {
+	padding-bottom: 50px;
+}
+
+/*-----------------------------------------------
+## Typography
+-----------------------------------------------*/
+.entry-title,
+.button-primary,
+.button-secondary {
+	font-weight: bold;
+}
+.entry-content ul,
+.entry-content ol {
+	padding-left: 16px;
+}
+.menu-social li a {
+	-webkit-font-smoothing: antialiased;
+}
+.site-footer {
+	text-decoration: underline;
+}
+.entry-title a:hover,
+.entry-title a:focus,
+.button-primary:hover,
+.button-primary:focus,
+.button-primary:active,
+.open > .dropdown-toggle.button-primary,
+.button-secondary:hover,
+.button-secondary:focus,
+.site-footer a:hover,
+.site-footer a:focus {
+	text-decoration: none;
+}
+.menu-social li a {
+	text-align: right;
+}
+
+/* Extra small devices (phones, less than 768px) */
+.social,
+.navbar-nav,
+.secondary-menu,
+.mod-divider-1,
+.mod-divider-2,
+.mod-gamma-1,
+.mod-gamma-2,
+.wc-gallery .gallery-caption h2,
+.site-footer,
+.site-title,
+.xs-center,
+.mod-img,
+.mod-img-circle,
+.p-button-primary,
+.p-button-secondary,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	text-align: center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.site-title,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		text-align: left;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.xs-center,
+	.mod-img,
+	.mod-img-circle,
+	.gridblock .p-button-primary,
+	.gridblock .p-button-secondary {
+		text-align: left;
+	}
+}
+
+/*-----------------------------------------------
+## Titles
+-----------------------------------------------*/
+.page-template-page_home .entry-title {
+	display: none;
+}
+.entry-title {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 45px;
+	padding: 15px;
+}
+
+/* Headings */
+.hentry {
+	margin: 0 auto;
+}
+.hentry:first-child ~ .hentry {
+	margin-top: 50px;
+}
+.heading h3 {
+	margin-top: 10px;
+}
+.heading {
+	margin-bottom: 15px;
+}
+h2 i.fa {
+	padding-right: 10px;
+}
+
+/*-----------------------------------------------
+## Buttons
+-----------------------------------------------*/
+.button-primary,
+.button-secondary {
+	padding: 14px 24px;
+	border-radius: 6px;
+	background: none;
+	transition: all .3s ease 0s;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	background: none;
+}
+
+/* Comments */
+.comment-reply-link.btn.button-primary {
+	padding: 5px 10px;
+}
+
+/* Positioning */
+.p-button-primary,
+.p-button-secondary {
+	padding: 13px;
+}
+.p-button-primary {
+	margin: 50px 0 30px;
+}
+.gridblock .p-button-secondary {
+	margin: -35px 0 30px;
+}
+
+/* Block vs. Inline */
+.button-primary,
+.button-secondary {
+	display: block;
+	margin-top: 15px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.button-primary,
+	.button-secondary {
+		display: inline;
+		margin-top: 0;
+	}
+	.gridblock .p-button-secondary {
+		margin: 20px 0 30px;
+	}
+}
+
+/*-----------------------------------------------
+## Et Cetera
+-----------------------------------------------*/
+hr {
+	margin: 65px 0 50px;
+	height: 1px;
+}
+
+/*------------------------------------------------------------------------
+# Header
+------------------------------------------------------------------------*/
+.site-title {
+	margin-bottom: 0;
+}
+.site-description {
+	margin-top: 0;
+}
+.site-header {
+	padding-top: 15px;
+}
+
+/*------------------------------------------------------------------------
+# Navigation
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Main Menu
+-----------------------------------------------*/
+.navbar {
+	margin-bottom: 10px;
+}
+.navbar-default {
+	border: none;
+	background: none;
+}
+.navbar-nav > li > a {
+	padding: 15px 10px;
+}
+#primary-navbar {
+	padding-right: 0;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+	background: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.navbar-default {
+		float: left;
+		padding-top: 0;
+	}
+	.navbar-collapse {
+		background: none;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.navbar-default {
+		float: right;
+		margin-right: -15px;
+	}
+}
+
+/*-----------------------------------------------
+## Other Menus
+-----------------------------------------------*/
+.secondary-menu {
+	margin-top: -15px;
+}
+.secondary-menu li a {
+	padding: 0 10px;
+}
+.tertiary-menu li a {
+	padding: 0 5px;
+}
+.secondary-menu li:after,
+.tertiary-menu li:after {
+	content: "";
+}
+
+/*-----------------------------------------------
+## Social Menus
+-----------------------------------------------*/
+.footer-center-items li.menu-social:after {
+	content: "";
+}
+
+/* Social Media */
+.social-menu {
+	float: right;
+	margin-top: 1em;
+}
+.social-menu li {
+	padding: 0 1em;
+}
+.social-menu li:last-of-type {
+	padding-right: 0;
+}
+
+/*------------------------------------------------------------------------
+# GridBlocks
+------------------------------------------------------------------------*/
+.gridblock li {
+	padding-left: 1px;
+	list-style-type: none;
+}
+.gridblock li::before {
+	position: relative;
+	display: inline-block;
+	margin-right: 8px;
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	content: "";
+}
+.gridblock hr {
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+/*------------------------------------------------------------------------
+# Modules
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Global
+-----------------------------------------------*/
+.mod-divider-1 {
+	margin-top: 0;
+	margin-bottom: 25px;
+	background: url("images/arrow-down.png") top center no-repeat;
+}
+.mod-divider-2 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background: url("images/arrow-down.png") top center no-repeat;
+}
+blockquote,
+.mod-blockquote {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+blockquote p,
+.mod-blockquote p {
+	padding-left: 15px;
+}
+
+/*-----------------------------------------------
+## Alpha
+-----------------------------------------------*/
+.mod-alpha img {
+	filter: grayscale(100%);
+	transition: all .3s ease 0s;
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+}
+.mod-alpha img:hover {
+	filter: grayscale(0%);
+	transition: all .3s ease 0s;
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+}
+
+/*-----------------------------------------------
+## Beta
+-----------------------------------------------*/
+.mod-beta img {
+	margin-bottom: 15px;
+}
+
+/*-----------------------------------------------
+## Gamma
+-----------------------------------------------*/
+.background-icon {
+	margin: 50px auto 0;
+	width: 120px;
+	height: 120px;
+	border-radius: 120px;
+}
+.mod-gamma-2 {
+	margin: 75px 0;
+}
+.mod-gamma-1 h2 {
+	margin: 15px 0;
+}
+
+/* Icons */
+.mod-gamma-1 .fa-comments-o {
+	padding: 20px 24px;
+}
+.mod-gamma-1 .fa-cogs {
+	padding: 24px 20px;
+}
+.mod-gamma-1 .fa-check-circle-o {
+	padding: 25px 30px;
+}
+.mod-gamma-1 .fa-rocket {
+	padding: 25px 25px;
+}
+
+/*------------------------------------------------------------------------
+# Pages
+------------------------------------------------------------------------*/
+/* Search Page */
+.search .jumbotron {
+	background: none;
+	text-align: center;
+}
+
+/*------------------------------------------------------------------------
+# Posts
+------------------------------------------------------------------------*/
+.entry-meta {
+	clear: both;
+}
+
+/*------------------------------------------------------------------------
+# Plugins
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## WP Canvas Gallery
+-----------------------------------------------*/
+.gallery-icon {
+	position: relative;
+	float: left;
+	max-width: 100%;
+}
+.gallery-icon::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+}
+.gallery-icon img {
+	float: left;
+}
+.wc-image-links .gallery-caption,
+.wc-gallery-captions-showon .gallery-caption {
+	max-height: 100%;
+	height: 100%;
+}
+.wc-gallery .gallery-caption h2 {
+	padding: 20% 15% 0;
+	white-space: normal;
+}
+.wcflex-direction-nav a {
+	-ms-filter: invert(1);
+	filter: invert(1);
+	cursor: pointer;
+	-moz-filter: invert(1);
+	-o-filter: invert(1);
+}
+.wc-gallery .wc-gallery-bottomspace-default {
+	margin-bottom: 0;
+}
+
+.wcflexslider-container .gallery-icon,
+.wc-gallery .gallery .gallery-icon a img,
+.wc-gallery .wcflexslider .slides .gallery-caption {
+	margin-left: -16px;
+}
+
+/*-----------------------------------------------
+## WooCommerce
+-----------------------------------------------*/
+.woocommerce .page-content,
+.woocommerce .entry-content,
+.woocommerce .entry-summary {
+	clear: none;
+}
+.woocommerce .entry-title {
+	float: none;
+	margin-bottom: 10px;
+}
+.woocommerce h1.entry-title {
+	background: transparent;
+}
+.panel {
+	background: none;
+	box-shadow: none;
+}
+.woocommerce-account p.order-again .btn.button-primary {
+	padding: 10px 20px;
+}
+
+/*-----------------------------------------------
+## The Events Calendar
+-----------------------------------------------*/
+.post-type-archive-tribe_events h4.entry-title {
+	float: none;
+}
+
+/*------------------------------------------------------------------------
+# Footer
+------------------------------------------------------------------------*/
+.site-footer {
+	padding: 2em 0;
+}
+.disabled-footer .site-footer {
+	padding: 15px 0;
+	height: auto;
+	background: none;
+}
